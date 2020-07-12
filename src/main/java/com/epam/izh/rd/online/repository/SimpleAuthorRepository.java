@@ -7,6 +7,12 @@ public class SimpleAuthorRepository implements AuthorRepository {
 
     @Override
     public boolean save(Author author) {
+        if (findByFullName(author.getName(), author.getLastName()) == null) {
+            Author[] authorsCopy = new Author[authors.length + 1];
+            System.arraycopy(authors, 0, authorsCopy, 0, authors.length);
+            authors = authorsCopy;
+            return true;
+        }
         return false;
     }
 
