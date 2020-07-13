@@ -54,6 +54,6 @@ public class SimpleAuthorRepository implements AuthorRepository {
 
     @Override
     public int count() {
-        return 0;
+        return authors.length;
     }
 }
