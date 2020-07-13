@@ -15,21 +15,21 @@ public class SimpleAuthorService implements AuthorService {
 
     @Override
     public boolean save(Author author) {
-        return false;
+        return authorRepository.save(author);
     }
 
     @Override
     public Author findByFullName(String name, String lastname) {
-        return null;
+        return authorRepository.findByFullName(name, lastname);
     }
 
     @Override
     public boolean remove(Author author) {
-        return false;
+        return authorRepository.remove(author);
     }
 
     @Override
     public int count() {
-        return 0;
+        return authorRepository.count();
     }
 }
