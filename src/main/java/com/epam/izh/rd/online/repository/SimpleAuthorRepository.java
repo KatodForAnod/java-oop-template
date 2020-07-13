@@ -10,6 +10,7 @@ public class SimpleAuthorRepository implements AuthorRepository {
         if (findByFullName(author.getName(), author.getLastName()) == null) {
             Author[] authorsCopy = new Author[authors.length + 1];
             System.arraycopy(authors, 0, authorsCopy, 0, authors.length);
+            authorsCopy[authorsCopy.length - 1] = author;
             authors = authorsCopy;
             return true;
         }
