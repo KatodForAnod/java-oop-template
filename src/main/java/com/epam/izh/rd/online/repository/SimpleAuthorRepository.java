@@ -42,7 +42,7 @@ public class SimpleAuthorRepository implements AuthorRepository {
         Author[] authorsCopy = new Author[authors.length - 1];
 
         for (int i = 0; i < authors.length; i++) {
-            if (i <= positionOfDeleteAuthor) {
+            if (i < positionOfDeleteAuthor) {
                 authorsCopy[i] = authors[i];
             } else if (i > positionOfDeleteAuthor) {
                 authorsCopy[i - 1] = authors[i];
