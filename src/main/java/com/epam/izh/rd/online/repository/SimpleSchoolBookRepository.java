@@ -11,6 +11,7 @@ public class SimpleSchoolBookRepository implements BookRepository<SchoolBook> {
         SchoolBook[] schoolBooksCopy = new SchoolBook[schoolBooks.length + 1];
         System.arraycopy(schoolBooks, 0, schoolBooksCopy, 0, schoolBooks.length);
         schoolBooksCopy[schoolBooksCopy.length - 1] = book;
+        schoolBooks = schoolBooksCopy;
         return true;
     }
 
