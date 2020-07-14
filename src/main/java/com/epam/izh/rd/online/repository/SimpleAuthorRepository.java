@@ -45,7 +45,7 @@ public class SimpleAuthorRepository implements AuthorRepository {
             if (i <= positionOfDeleteAuthor) {
                 authorsCopy[i] = authors[i];
             } else if (i > positionOfDeleteAuthor) {
-                authorsCopy[i] = authors[i - 1];
+                authorsCopy[i - 1] = authors[i];
             }
         }
         authors = authorsCopy;
